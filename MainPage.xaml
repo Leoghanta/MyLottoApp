@@ -25,9 +25,12 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/> 
+            <RowDefinition Height="2*"/> 
         </Grid.RowDefinitions>
-  
+
+
+        <ComboBox x:Name="comboboxUserList" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"
+                  Width="250" Margin="10" ItemsSource="{x:Bind game.UsersList}" DisplayMemberPath="Name" />
 
     </Grid>
     

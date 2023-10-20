@@ -22,9 +22,21 @@ namespace MyLottoApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        PlayGame game = App.game;
+
         public MainPage()
         {
             this.InitializeComponent();
-        }
+
+            User usr = new User("Jimi", "Jimi@Jimi.com", "123456");
+            game.UsersList.Add(usr);
+
+			User usr2 = new User("Bob", "Jimi@Jimi.com", "123456");
+			game.UsersList.Add(usr2);
+			User usr3 = new User("Fred", "Jimi@Jimi.com", "123456");
+			game.UsersList.Add(usr3);
+
+		}
     }
 }
